@@ -1,0 +1,16 @@
+[package]
+name = "timestamp-lsp"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "LSP server that shows UTC and local time on hover over a Unix timestamp."
+
+[[bin]]
+name = "timestamp-lsp"
+path = "src/main.rs"
+
+[dependencies]
+tower-lsp = "0.20"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "io-std", "io-util"] }
+chrono = "0.4"
+serde_json = "1"
